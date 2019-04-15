@@ -79,7 +79,7 @@ class WxController extends Controller
 
             //token获取接口调用
             $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'';
-            $response = f.$this->token()ile_get_contents($url); //接受url数据
+            $response = file_get_contents($url); //接受url数据
             $arr = json_decode($response,true);
 //        var_dump($arr);exit;  输出得 ["access_token"]   ["expires_in"]
 
@@ -94,7 +94,7 @@ class WxController extends Controller
 
 
     public function getuser($openid){
-        $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.'&openid='.$openid.'&lang=zh_CN';
+        $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->token().'&openid='.$openid.'&lang=zh_CN';
 //        echo $url;die;
         $data = file_get_contents($url);
 //        var_dump($data);die;
