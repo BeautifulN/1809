@@ -14,6 +14,7 @@ class WxController extends Controller
         echo $_GET['echostr'];
     }
 
+    //就收微信推送信息并处理
     public function event(){
         $content = file_get_contents("php://input");
 
@@ -89,6 +90,14 @@ class WxController extends Controller
         return $token;
     }
 
-    //就收微信推送信息并处理
+
+    public function getuser($openid){
+        $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->token().'&openid='.$openid.'&lang=zh_CN';
+//        echo $url;die;
+        $data = file_get_contents($url);
+//        var_dump($data);die;
+        $arr = json_decode($data,true);
+        return $arr;
+    }
 
 }
