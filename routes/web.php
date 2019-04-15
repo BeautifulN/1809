@@ -21,3 +21,4 @@ Route::any('index', 'Weixin\WxController@event');
 Route::any('event', 'Weixin\WxController@event');
 Route::get('token', 'Weixin\WxController@token');
 Route::get('getuser', 'Weixin\WxController@getuser');
+Route::post('menu2', 'Weixin\WxController@menu2');
