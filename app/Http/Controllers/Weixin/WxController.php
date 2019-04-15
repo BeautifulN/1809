@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 
+use GuzzleHttp\Client;
+
 class WxController extends Controller
 {
     public function index(){
@@ -61,7 +63,6 @@ class WxController extends Controller
                 ];
 
                 $sql = DB::table('wx_address')->insertGetId($info);
-                print_r($sql);
 
             }
         }
@@ -78,7 +79,7 @@ class WxController extends Controller
 
             //token获取接口调用
             $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'';
-            $response = file_get_contents($url); //接受url数据
+            $response = f.$this->token()ile_get_contents($url); //接受url数据
             $arr = json_decode($response,true);
 //        var_dump($arr);exit;  输出得 ["access_token"]   ["expires_in"]
 
@@ -93,7 +94,7 @@ class WxController extends Controller
 
 
     public function getuser($openid){
-        $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->token().'&openid='.$openid.'&lang=zh_CN';
+        $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.'&openid='.$openid.'&lang=zh_CN';
 //        echo $url;die;
         $data = file_get_contents($url);
 //        var_dump($data);die;
@@ -109,31 +110,31 @@ class WxController extends Controller
         $arr = [
             'button' => [
 
-                ["type" => "view",
+                [
+                    "type" => "view",
                     "name" => "百度一下",
                     "url" => "http://www.baidu.com/"
                 ],
 
                 [ "name" => "呜哈哈哈",
                     "sub_button"=>[
-                    [
-                       "type"=>"view",
-                       "name"=>"搜索",
-                       "url"=>"http://www.soso.com/"
-                    ],
-                    [
-                        "type"=>"miniprogram",
-                         "name"=>"wxa",
-                         "url"=>"http://mp.weixin.qq.com",
-                         "appid"=>"wx286b93c14bbf93aa",
-                         "pagepath"=>"pages/lunar/index"
-                    ],
-                    [
-                        "type"=>"click",
-                       "name"=>"赞一下我们",
-                       "key"=>"wx1"
-                    ]
-
+                        [
+                           "type"=>"view",
+                           "name"=>"搜索",
+                           "url"=>"http://www.soso.com/"
+                        ],
+                        [
+                            "type"=>"miniprogram",
+                             "name"=>"wxa",
+                             "url"=>"http://mp.weixin.qq.com",
+                             "appid"=>"wx286b93c14bbf93aa",
+                             "pagepath"=>"pages/lunar/index"
+                        ],
+                        [
+                            "type"=>"click",
+                           "name"=>"赞一下我们",
+                           "key"=>"wx1"
+                        ]
                     ]
                 ]
             ]
@@ -148,6 +149,7 @@ class WxController extends Controller
         $res = $response->getBody();
 
         $arr = json_decode($res,true);
+        print_r($arr);exit;
 
         //判断错误信息
         if($arr['errcode']>0){
