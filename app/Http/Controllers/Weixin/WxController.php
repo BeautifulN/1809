@@ -25,12 +25,12 @@ class WxController extends Controller
         file_put_contents("logs/wx_event.log",$srt,FILE_APPEND);  //创建微信log日志
 
         $obj = simplexml_load_string($content); //把xml转换成对象
-//        print_r($obj);
+        print_r($obj);
         echo 'ToUserName:'.$obj['ToUserName'];echo"</br>";//微信号
         echo 'FromUserName:'.$obj['FromUserName'];echo"</br>";//用户openid
         echo 'CreateTime:'.$obj['CreateTime'];echo"</br>";//推送时间
         echo 'Event:'.$obj['Event'];echo"</br>";//消息类型
-
+        
         die;
         $openid = $obj->FromUserName;
 
