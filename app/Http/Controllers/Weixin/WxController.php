@@ -149,7 +149,7 @@ class WxController extends Controller
         $res = $response->getBody();
 
         $arr = json_decode($res,true);
-        print_r($arr);exit;
+//        print_r($arr);exit;
 
         //判断错误信息
         if($arr['errcode']>0){
