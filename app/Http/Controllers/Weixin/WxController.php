@@ -74,7 +74,7 @@ class WxController extends Controller
         if ($token){
 //            echo '11111';
         }else{
-//            echo '2222';
+//            echo '22222';
 
             //token获取接口调用
             $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'';
@@ -114,14 +114,29 @@ class WxController extends Controller
                     "url" => "http://www.baidu.com/"
                 ],
 
-                [
-                    "type" => "click",
-                    "name" => "点我，嘿嘿嘿",
-                    "key" => "key_1"
-                ],
+                [ "name" => "点我，嘿嘿嘿",
+                    "sub_button"=>[
+                    [
+                       "type"=>"view",
+                       "name"=>"搜索",
+                       "url"=>"http://www.soso.com/"
+                    ],
+                    [
+                        "type"=>"miniprogram",
+                         "name"=>"wxa",
+                         "url"=>"http://mp.weixin.qq.com",
+                         "appid"=>"wx286b93c14bbf93aa",
+                         "pagepath"=>"pages/lunar/index"
+                    ],
+                    [
+                        "type"=>"click",
+                       "name"=>"赞一下我们",
+                       "key"=>"wx1"
+                    ],
 
+                    ]
+                ]
             ]
-
         ];
         $str = json_encode($arr,JSON_UNESCAPED_UNICODE);   //处理中文乱码
         $clinet = new Client();  //发送请求
