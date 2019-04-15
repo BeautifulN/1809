@@ -132,7 +132,7 @@ class WxController extends Controller
                         "type"=>"click",
                        "name"=>"赞一下我们",
                        "key"=>"wx1"
-                    ],
+                    ]
 
                     ]
                 ]
