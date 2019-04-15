@@ -4,58 +4,41 @@ namespace App\Http\Controllers\Weixin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 
 use GuzzleHttp\Client;
 
 class WxController extends Controller
 {
-
-    /*
-     * 首次接入GET请求
-     * */
     public function index(){
         echo $_GET['echostr'];
     }
 
-    /*
-     * 接收微信时间推送
-     * */
-    public function wxEvent(){
-        //接收微信服务器推送
+    //就收微信推送信息并处理
+    public function event(){
         $content = file_get_contents("php://input");
 
         $time = date('Y-m-d H:i:s');
 
         $srt = $time . $content . "\n";
 
-        file_put_contents("logs/wx_event.log",$srt,FILE_APPEND);
+        file_put_contents("logs/wx_event.log",$srt,FILE_APPEND);  //创建微信log日志
 
         $obj = simplexml_load_string($content); //把xml转换成对象
 //        print_r($obj);
-//        获取相应的字段 (对象格式)
-//        $openid = $obj['FromUserName'];  //用户openid
-        $openid = $obj->FromUserName;  //用户openid
-        $wxid = $obj->ToUserName;   //微信号ID
-//                print_r($wxid);
-
-        $msgtype = $obj->MsgType;
-        $content = $obj->Content;
-        $media_id = $obj->MediaId;
-
-//        print_r($msgtype);
 //        echo 'ToUserName:'.$obj->ToUserName;echo"</br>";//微信号
 //        echo 'FromUserName:'.$obj->FromUserName;echo"</br>";//用户openid
 //        echo 'CreateTime:'.$obj->CreateTime;echo"</br>";//推送时间
 //        echo 'Event:'.$obj->Event;echo"</br>";//消息类型
-//die;
+
+//        die;
+        $openid = $obj->FromUserName;
 
 //        事件类型
         $event = $obj->Event;
 
-//        扫码关注事件
         if($event=='subscribe') {
             //根据openid判断用户是否已存在
             $user = DB::table('wx_address')->where(['openid' => $openid])->first();
@@ -63,7 +46,7 @@ class WxController extends Controller
 
             //如果用户之前关注过
             if ($user) {
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>' . time() . '</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'来了，老弟儿~' . $user->nickname . ']]></Content></xml>';
+
             }else{
 ///               获取用户的信息
                 $userinfo = $this->getuser($openid);
@@ -79,58 +62,24 @@ class WxController extends Controller
                     'subscribe_time' => $userinfo['subscribe_time'],
                 ];
 
-                $sql = DB::table('wx_address')->i53nsertGetId($info);
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
+                $sql = DB::table('wx_address')->insertGetId($info);
 
             }
         }
-
-        //获取消息素材
-        if ($msgtype=='text'){   //文本素材
-
-//            $userinfo = $this->getuser($openid);
-            $info = [
-                'openid' => $openid,
-//                'nickname' => $userinfo['nickname'],
-                'content' => $content,
-//                'headimgurl' => $userinfo['headimgurl'],
-//                'subscribe_time' => $userinfo['subscribe_time'],
-            ];
-
-            $sql = DB::table('wx_text')->insertGetId($info);
-        }else if($msgtype=='image'){   //图片素材
-            $access=$this->token();
-            $url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=$access&media_id=$media_id";
-            $time = time();
-            $str = file_get_contents($url);
-            file_put_contents("/wwwroot/1809ashop/image/$time.jpg",$str,FILE_APPEND);
-
-        }else if($msgtype=='voice'){   //语音素材
-            $access=$this->token();
-            $url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=$access&media_id=$media_id";
-            $time = time();
-            $str = file_get_contents($url);
-            file_put_contents("/wwwroot/1809ashop/voice/$time.mp3",$str,FILE_APPEND);
-
-        }
-
     }
 
-    /*
-     * 获取微信AccessToken
-     * */
+    //获取token
     public function token(){
-
-        $key = 'access_token';
-        $tok = Redis::get($key);
-//        var_dump($tok);die;
-        if($tok){
-            //echo '有缓存';
+        $key = 'accosse_token';
+        $token = Redis::get($key);
+        if ($token){
+//            echo '11111';
         }else{
-            //echo '无缓存';
-            $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'';
+//            echo '22222';
 
-            $response = file_get_contents($url);
+            //token获取接口调用
+            $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'';
+            $response = file_get_contents($url); //接受url数据
             $arr = json_decode($response,true);
 //        var_dump($arr);exit;  输出得 ["access_token"]   ["expires_in"]
 
@@ -138,21 +87,12 @@ class WxController extends Controller
             Redis::set($key,$arr['access_token']);
             Redis::expire($key,3600);
 
-            $tok = $arr['access_token'];
-//            print_r($tok);
+            $token = $arr['access_token'];
         }
-
-        return $tok;
+        return $token;
     }
 
-    public function text(){
-        $access_token = $this->token();
-        echo $access_token;
-    }
 
-    /*
-     * 获取用户基本信息
-     * */
     public function getuser($openid){
         $url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->token().'&openid='.$openid.'&lang=zh_CN';
 //        echo $url;die;
@@ -162,8 +102,7 @@ class WxController extends Controller
         return $arr;
     }
 
-    //自定义菜单
-    public function menu(){
+    public function menu2(){
 //        接口
         $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->token();
 
@@ -177,24 +116,24 @@ class WxController extends Controller
                     "url" => "http://www.baidu.com/"
                 ],
 
-                [ "name" => "点我，嘿嘿嘿",
+                [ "name" => "呜哈哈哈",
                     "sub_button"=>[
                         [
-                            "type"=>"view",
-                            "name"=>"嘿羞网站",
-                            "url"=>"http://cpc.people.com.cn/"
+                           "type"=>"view",
+                           "name"=>"搜索",
+                           "url"=>"http://www.soso.com/"
                         ],
                         [
                             "type"=>"miniprogram",
-                            "name"=>"网警举报",
-                            "url"=>"http://mp.weixin.qq.com",
-                            "appid"=>"wx286b93c14bbf93aa",
-                            "pagepath"=>"pages/lunar/index"
+                             "name"=>"wxa",
+                             "url"=>"http://mp.weixin.qq.com",
+                             "appid"=>"wx286b93c14bbf93aa",
+                             "pagepath"=>"pages/lunar/index"
                         ],
                         [
                             "type"=>"click",
-                            "name"=>"赞一下我们",
-                            "key"=>"wx1"
+                           "name"=>"赞一下我们",
+                           "key"=>"wx1"
                         ]
                     ]
                 ]
@@ -207,9 +146,11 @@ class WxController extends Controller
         ]);
 
         //处理响应回来
-        //
-        //        $arr = json_decode($res,true);
-        print_r($arr);
+        $res = $response->getBody();
+
+        $arr = json_decode($res,true);
+//        print_r($arr);exit;
+
         //判断错误信息
         if($arr['errcode']>0){
             echo "菜单创建失败";
