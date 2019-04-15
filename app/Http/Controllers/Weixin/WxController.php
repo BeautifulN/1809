@@ -26,10 +26,10 @@ class WxController extends Controller
 
         $obj = simplexml_load_string($content); //把xml转换成对象
 //        print_r($obj);
-        echo 'ToUserName:'.$obj->ToUserName;echo"</br>";//微信号
-        echo 'FromUserName:'.$obj->FromUserName;echo"</br>";//用户openid
-        echo 'CreateTime:'.$obj->CreateTime;echo"</br>";//推送时间
-        echo 'Event:'.$obj->Event;echo"</br>";//消息类型
+        echo 'ToUserName:'.$obj['ToUserName'];echo"</br>";//微信号
+        echo 'FromUserName:'.$obj['FromUserName'];echo"</br>";//用户openid
+        echo 'CreateTime:'.$obj['CreateTime'];echo"</br>";//推送时间
+        echo 'Event:'.$obj['Event'];echo"</br>";//消息类型
 
         die;
         $openid = $obj->FromUserName;
