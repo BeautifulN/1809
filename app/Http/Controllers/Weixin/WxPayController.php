@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class WxPayController extends Controller
 {
     public $weixin_unifiedorder_url = 'https://api.mch.weixin.qq.com/pay/unifiedorder'; //统一下单接口
-    public $notify_url  = 'http://1809lvmingjin.comcto.com/weixin/pay/anotify'; //支付回调
+    public $notify_url  = 'http://1809lvmingjin.comcto.com/anotify'; //支付回调
 
     /*
      * 微信支付测试
