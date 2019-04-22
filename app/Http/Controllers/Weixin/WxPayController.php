@@ -40,6 +40,7 @@ class WxPayController extends Controller
         $this->values = $order_info;
         $this->SetSign();
         $xml = $this->ToXml();      //将数组转换为XML
+//        print_r($xml);
         $rs = $this->postXmlCurl($xml, $this->weixin_unifiedorder_url, $useCert = false, $second = 30);
 //        print_r($rs);exit;
         $data =  simplexml_load_string($rs);
@@ -165,10 +166,8 @@ class WxPayController extends Controller
     public function notify()
     {
         $data = file_get_contents("php://input");
-//        print_r($data);
         //记录日志
         $log_str = date('Y-m-d H:i:s') . "\n" . $data . "\n<<<<<<<";
-
         file_put_contents('logs/wx_pay_notice.log',$log_str,FILE_APPEND);
         $xml = simplexml_load_string($data);
         if($xml->result_code=='SUCCESS' && $xml->return_code=='SUCCESS'){      //微信支付成功回调
@@ -197,9 +196,5 @@ class WxPayController extends Controller
     {
         $oid = $_GET['oid'];
         echo 'OID: '.$oid . "支付成功";
-    }
-
-    public function a(){
-        echo 111111;
     }
 }
