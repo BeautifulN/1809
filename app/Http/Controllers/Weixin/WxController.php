@@ -116,7 +116,7 @@ class WxController extends Controller
                     "url" => "http://www.baidu.com/"
                 ],
 
-                [ "name" => "呜哈哈哈",
+                [   "name" => "呜哈哈哈",
                     "sub_button"=>[
                         [
                            "type"=>"view",
