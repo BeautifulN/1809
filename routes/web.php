@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 //项目
 Route::get('index', 'Index\IndexController@index');
+Route::get('goodsdeatil', 'Index\IndexController@goodsdeatil');
+
 Route::any('add/{goods_id?}', 'Index\IndexController@add');
 Route::get('cart', 'Cart\CartController@cart');
 

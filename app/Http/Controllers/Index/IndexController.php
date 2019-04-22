@@ -6,8 +6,10 @@ use App\Model\CartModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 use App\Model\GoodsModel;
+
 
 class IndexController extends Controller
 {
@@ -19,6 +21,28 @@ class IndexController extends Controller
         $arr = GoodsModel::where('goods_up',1)->get();
 
         return view('index.index',['arr'=>$arr]);
+    }
+
+    /*
+     * 商品详情
+     * */
+    public function goodsdeatil(){
+        $goods_id = intval($_GET['goods_id']);
+//        print_r($goods_id);
+        $key = $goods_id;
+        $history = Redis::incr($key);
+//         echo $history;die;
+        $arr = GoodsModel::where(['goods_id'=>$goods_id])->first();
+//         var_dump($arr);die;
+        if($arr){
+            GoodsModel::where(['goods_id'=>$goods_id])->update(['goods_key'=>$arr['goods_key']+1]);
+        }else{
+            $detail = [
+                'goods_look'=> $arr['goods_look'] +1,
+            ];
+            GoodsModel::insertGetId($detail);
+        }
+
     }
 
     /*

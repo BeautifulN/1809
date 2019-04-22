@@ -120,7 +120,7 @@
             type: 'get',
             dataType:'json',
             success: function(d){
-                if(d.status==0){
+                if(d.pay_status==0){
                     alert("支付成功");
                     location.href = "/success?order_id={{$order_id}}";
                 }
