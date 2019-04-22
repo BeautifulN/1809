@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class WxPayController extends Controller
 {
     public $weixin_unifiedorder_url = 'https://api.mch.weixin.qq.com/pay/unifiedorder'; //统一下单接口
-    public $notify_url  = 'http://1809lvmingjin.comcto.com/anotify'; //支付回调
+    public $notify_url  = 'http://1809lvmingjin.comcto.com/notify'; //支付回调
 
     /*
      * 微信支付测试
@@ -24,16 +24,16 @@ class WxPayController extends Controller
 //        print_r($order_id);
 //        $order_id = time().mt_rand(11111,99999);            //测试订单号 随机生成
         $order_info = [
-            'appid'         =>  env('WEIXIN_APPID_0'),      //微信支付绑定的服务号的APPID
-            'mch_id'        =>  env('WEIXIN_MCH_ID'),       // 商户ID
-            'nonce_str'     => Str::random(16),             // 随机字符串
-            'sign_type'     => 'MD5',
-            'body'          => '测试订单-'.mt_rand(1111,9999) . Str::random(6),
-            'out_trade_no'  => $order['order_number'],                       //本地订单号
-            'total_fee'     => $total_fee,
+            'appid'             =>  env('WEIXIN_APPID_0'),      //微信支付绑定的服务号的APPID
+            'mch_id'            =>  env('WEIXIN_MCH_ID'),       // 商户ID
+            'nonce_str'         => Str::random(16),             // 随机字符串
+            'sign_type'         => 'MD5',
+            'body'              => '测试订单-'.mt_rand(1111,9999) . Str::random(6),
+            'out_trade_no'      => $order['order_number'],                       //本地订单号
+            'total_fee'         => $total_fee,
             'spbill_create_ip'  => $_SERVER['REMOTE_ADDR'],     //客户端IP
-            'notify_url'    => $this->notify_url,        //通知回调地址
-            'trade_type'    => 'NATIVE'                         // 交易类型
+            'notify_url'        => $this->notify_url,        //通知回调地址
+            'trade_type'        => 'NATIVE'                         // 交易类型
         ];
 //
         $this->values = [];
@@ -162,14 +162,15 @@ class WxPayController extends Controller
     /**
      * 微信支付回调
      */
-    public function anotify()
+    public function notify()
     {
         $data = file_get_contents("php://input");
+//        print_r($data);
         //记录日志
         $log_str = date('Y-m-d H:i:s') . "\n" . $data . "\n<<<<<<<";
+
         file_put_contents('logs/wx_pay_notice.log',$log_str,FILE_APPEND);
         $xml = simplexml_load_string($data);
-        print_r($xml);
         if($xml->result_code=='SUCCESS' && $xml->return_code=='SUCCESS'){      //微信支付成功回调
             //验证签名
             $sign = true;
@@ -196,5 +197,9 @@ class WxPayController extends Controller
     {
         $oid = $_GET['oid'];
         echo 'OID: '.$oid . "支付成功";
+    }
+
+    public function a(){
+        echo 111111;
     }
 }

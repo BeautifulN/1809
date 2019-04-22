@@ -33,7 +33,7 @@ Route::get('lists', 'Order\OrderController@lists');
 
 //微信支付
 Route::get('test/{order_id?}','Weixin\WxPayController@test');           //支付
-Route::post('anotify','Weixin\WxPayController@anotify');       //微信支付回调地址
+Route::post('notify','Weixin\WxPayController@notify');       //微信支付回调地址
 Route::get('success', 'Weixin\WxPayController@success');
 
 Route::get('create', 'Order\OrderController@create');

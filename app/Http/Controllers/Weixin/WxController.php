@@ -16,7 +16,7 @@ class WxController extends Controller
         echo $_GET['echostr'];
     }
 
-    //就收微信推送信息并处理
+    //接收微信推送信息并处理
     public function event(){
         $content = file_get_contents("php://input");
 
