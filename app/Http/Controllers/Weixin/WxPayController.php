@@ -198,7 +198,7 @@ class WxPayController extends Controller
      */
     public function success()
     {
-        $oid = $_GET['oid'];
-        echo 'OID: '.$oid . "支付成功";
+        $order_id = $_GET['order_id'];
+        echo 'OID: '.$order_id . "支付成功";
     }
 }
