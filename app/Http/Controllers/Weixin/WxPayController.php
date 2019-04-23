@@ -72,6 +72,7 @@ class WxPayController extends Controller
         $arr = DB::table('order')->where($where)->get();
         return view('weixin.text',$data,['arr'=>$arr]);
     }
+    
     protected function ToXml()
     {
         if(!is_array($this->values)

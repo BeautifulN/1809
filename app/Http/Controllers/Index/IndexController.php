@@ -26,14 +26,19 @@ class IndexController extends Controller
     /*
      * 商品详情
      * */
-    public function goodsdeatil(){
+    public function goodsdetail(){
         $goods_id = intval($_GET['goods_id']);
 //        print_r($goods_id);
         $key = $goods_id;
-        $history = Redis::incr($key);
-//         echo $history;die;
+        $redis_view_keys = 'ss:goods:view';  //获取商品浏览排名
+//        print_r($redis_view_keys);
+        $history = Redis::incr($key);  //商品浏览次数
+//        echo $history;die;
+        Redis::zAdd($redis_view_keys,$history,$goods_id);
+
         $arr = GoodsModel::where(['goods_id'=>$goods_id])->first();
 //         var_dump($arr);die;
+        //浏览次数+1
         if($arr){
             GoodsModel::where(['goods_id'=>$goods_id])->update(['goods_key'=>$arr['goods_key']+1]);
         }else{
@@ -43,7 +48,62 @@ class IndexController extends Controller
             GoodsModel::insertGetId($detail);
         }
 
+        //哈希
+        $redis_key = 'h:goods_info'.$goods_id;
+        $cache_info = Redis::hGetAll($redis_key);
+//        print_r($cache_info);
+        if ($cache_info){
+//            echo '有';
+        }else{
+//            echo '无';
+            $goods_info = GoodsModel::where(['goods_id'=>$goods_id])->first()->toArray();
+//            echo '<pre>';print_r($goods_info);echo '</pre>';echo '<hr>';
+            Redis::hMset($redis_key,$goods_info);
+        }
+
+        $list1 = Redis::Zrangebyscore($redis_view_keys,0,10000,['withscores'=>true]);  //正序
+//        echo '<pre>';print_r($list1);echo '</pre>';echo '<hr>';
+        $list2 = Redis::Zrevrange($redis_view_keys,0,10000,true);  //倒序
+//        echo '<pre>';print_r($list2);echo '</pre>';echo '<hr>';
+
+        //浏览历史
+        $info = [];
+        foreach ($list2 as $k=>$v){
+            $info[] = GoodsModel::where(['goods_id'=>$k])->first()->toArray();  //浏览历史
+//            print_r($info);
+
+//            echo '<pre>';print_r($info);echo '</pre>';echo '<hr>';
+        }
+
+        //浏览记录
+        $data = [];
+        foreach ($list1 as $k=>$v){
+            $data[] = GoodsModel::where(['goods_id'=>$k])->first()->toArray();  //浏览历史
+//            print_r($info);
+
+//            echo '<pre>';print_r($info);echo '</pre>';echo '<hr>';
+        }
+
+        $arr = GoodsModel::where('goods_id',$goods_id)->get();  //商品详情
+
+        return view('index.goodsdetail',['arr'=>$arr,'info'=>$info,'data'=>$data]);
     }
+
+//    /*
+//     * 浏览历史
+//     * */
+//    public function history(){
+//        $redis_view_keys = 'ss:goods:view';  //获取商品浏览排名
+//        $list2 = Redis::Zrevrange($redis_view_keys,0,10000,true);  //倒序
+////        echo '<pre>';print_r($list2);echo '</pre>';echo '<hr>';
+//        $info = [];
+//        foreach ($list2 as $k=>$v){
+//            $info = GoodsModel::where(['goods_id'=>$k])->first()->toArray();
+//            print_r($info);
+//        }
+//        return view('index.goodsdetail',['info'=>$info]);
+//    }
+
 
     /*
      * 添加购物车

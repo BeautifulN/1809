@@ -25,7 +25,8 @@ Route::get('/', function () {
 
 //项目
 Route::get('index', 'Index\IndexController@index');
-Route::get('goodsdeatil', 'Index\IndexController@goodsdeatil');
+Route::get('goodsdetail', 'Index\IndexController@goodsdetail');
+Route::get('history', 'Index\IndexController@history');
 
 Route::any('add/{goods_id?}', 'Index\IndexController@add');
 Route::get('cart', 'Cart\CartController@cart');
@@ -40,6 +41,11 @@ Route::get('success', 'Weixin\WxPayController@success');
 
 Route::get('create', 'Order\OrderController@create');
 Route::get('paystatus', 'Order\OrderController@paystatus');
+
+//微信JSSDK
+Route::get('jstest', 'Weixin\JssdkController@jstest');      //jssdk测试
+Route::get('jstest', 'Weixin\JssdkController@jstest');      //获取JSSDK上传的照片
+
 
 Auth::routes();
 

@@ -21,7 +21,7 @@
     @foreach ($arr as $v)
         <tr>
             <td>{{ $v->goods_id }}</td>
-            <td><a href="goodsdeatil?goods_id={{ $v->goods_id }}">{{ $v->goods_name }}</a></td>
+            <td><a href="goodsdetail?goods_id={{ $v->goods_id }}">{{ $v->goods_name }}</a></td>
             <td>{{ $v->goods_selfprice }}</td>
             <td>{{ $v->goods_num }}</td>
             <td>
