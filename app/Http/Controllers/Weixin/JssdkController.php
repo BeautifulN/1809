@@ -22,14 +22,14 @@ class JssdkController extends Controller
         $sign = sha1($string1);
 //        print_r($sign);
 
-        $js_info = [
+        $js_config = [
             'appId'         => env('WX_APPID'),  //公众号APPID
             'timestamp'     => $timestamp,  //时间
             'nonceStr'      => $nonceStr,  //随机字符串
             'signature'     => $sign,  //签名
         ];
         $data = [
-            'jsconfig' => $js_info
+            'jsconfig' => $js_config
         ];
         return  view('weixin.jssdk',$data);
     }
