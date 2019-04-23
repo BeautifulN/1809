@@ -51,7 +51,7 @@
                         });
                     })
                     $.ajax({
-                        url : '/getimg?img='+img,     //将上传的照片id发送给后端
+                        url : 'getimg?img='+img,     //将上传的照片id发送给后端
                         type: 'get',
                         success:function(d){
                             console.log(d);
