@@ -74,7 +74,7 @@
                 imgUrl: '', // 分享图标
                 success: function () {
                     // 设置成功
-                    echo 'SECCUSS';
+                    alert(11111);
                 }
             })
 

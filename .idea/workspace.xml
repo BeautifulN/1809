@@ -48,8 +48,8 @@
       <file leaf-file-name="JssdkController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="447">
+              <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="37" />
               <folding>
                 <element signature="e#47#75#0#PHP" expanded="true" />
               </folding>
@@ -61,12 +61,12 @@
         <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="644">
-              <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+              <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
               <folding>
-                <marker date="1556036372048" expanded="true" signature="729:747" ph="..." />
-                <marker date="1556036372048" expanded="true" signature="789:811" ph="..." />
-                <marker date="1556036372048" expanded="true" signature="852:873" ph="..." />
-                <marker date="1556036372048" expanded="true" signature="915:937" ph="..." />
+                <marker date="1556036610091" expanded="true" signature="729:747" ph="..." />
+                <marker date="1556036610091" expanded="true" signature="789:811" ph="..." />
+                <marker date="1556036610091" expanded="true" signature="852:873" ph="..." />
+                <marker date="1556036610091" expanded="true" signature="915:937" ph="..." />
               </folding>
             </state>
           </provider>
@@ -436,12 +436,12 @@
       <workItem from="1555724276900" duration="3894000" />
       <workItem from="1555851993911" duration="12654000" />
       <workItem from="1555894042353" duration="27985000" />
-      <workItem from="1555980417473" duration="26097000" />
+      <workItem from="1555980417473" duration="26333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96553000" />
+    <option name="totallyTimeSpent" value="96789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -903,8 +903,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="447">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="37" />
           <folding>
             <element signature="e#47#75#0#PHP" expanded="true" />
           </folding>
@@ -914,12 +914,12 @@
     <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
-          <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
           <folding>
-            <marker date="1556036372048" expanded="true" signature="729:747" ph="..." />
-            <marker date="1556036372048" expanded="true" signature="789:811" ph="..." />
-            <marker date="1556036372048" expanded="true" signature="852:873" ph="..." />
-            <marker date="1556036372048" expanded="true" signature="915:937" ph="..." />
+            <marker date="1556036610091" expanded="true" signature="729:747" ph="..." />
+            <marker date="1556036610091" expanded="true" signature="789:811" ph="..." />
+            <marker date="1556036610091" expanded="true" signature="852:873" ph="..." />
+            <marker date="1556036610091" expanded="true" signature="915:937" ph="..." />
           </folding>
         </state>
       </provider>
