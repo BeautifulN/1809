@@ -38,7 +38,7 @@ class JssdkController extends Controller
 //        echo '<pre>';print_r($_GET);echo '</pre>';
         $media_id = file_get_contents('php://input');
 //        print_r($media_id);
-        $url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->getWxAccessToken().'&media_id=$media_id";
+        $url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=getWxAccessToken()&media_id=$media_id";
         $time = time();
         $str = file_get_contents($url);
         file_put_contents("/wwwroot/1809/image/$time.jpg",$str,FILE_APPEND);
