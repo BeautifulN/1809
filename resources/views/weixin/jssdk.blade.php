@@ -15,6 +15,8 @@
 <hr>
 <img src="" alt="" id="imgs1"  width="300">
 
+<button id="btn2">分享给好友</button>
+
 <script src="/js/jquery/jquery-1.12.4.min.js"></script>
 <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js "></script>
 <script>
@@ -51,7 +53,7 @@
                                 console.log(res1);
                             }
                         });
-                    })
+                    });
                     $.ajax({
                         url : 'getimg?img='+img,     //将上传的照片id发送给后端
                         type: 'get',
@@ -63,6 +65,21 @@
                 }
             });
         });
+        $("#btn2").click(function(){
+            //分享给好友
+            wx.updateAppMessageShareData({
+                title: '这是一个图片', // 分享标题
+                desc: '本人太懒', // 分享描述
+                link: 'http://1809lvmingjin.comcto.com/1556031458.jpg', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: '', // 分享图标
+                success: function () {
+                    // 设置成功
+                    echo 'SECCUSS';
+                }
+            })
+
+        });
+
     });
 </script>
 </body>

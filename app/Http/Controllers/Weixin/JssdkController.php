@@ -44,6 +44,7 @@ class JssdkController extends Controller
         file_put_contents("/wwwroot/1809/image/$time.jpg",$str,FILE_APPEND);
         $image = '/wwwroot/1809/image/'.$time.'.jpg';
 //                print_r($image);exit;
+        echo 'OK';
     }
 
 }
