@@ -16,7 +16,7 @@ class JssdkController extends Controller
         $timestamp = time();
         $current_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI'];
 //        print_r($current_url);exit;
-
+        print_r($ticket);exit;
 
         $string1 = "jsapi_ticket=$ticket&noncestr=$nonceStr&timestamp=$timestamp&url=$current_url";
         $sign = sha1($string1);
@@ -31,7 +31,7 @@ class JssdkController extends Controller
         $data = [
             'jsconfig' => $js_config
         ];
-        return  view('weinixn.jssdk',$data);
+        return  view('weixin.jssdk',$data);
     }
 
     public function getimg(){
