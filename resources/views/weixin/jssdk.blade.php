@@ -67,14 +67,16 @@
         });
         $("#btn2").click(function(){
             //分享给好友
+            var link = "https://www.baidu.com/";
+
             wx.updateAppMessageShareData({
                 title: '这是一个图片', // 分享标题
                 desc: '本人太懒', // 分享描述
-                link: 'http://1809lvmingjin.comcto.com/1556031458.jpg', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                link:  link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                 imgUrl: '', // 分享图标
-                success: function () {
+                success: function (c) {
                     // 设置成功
-                    alert(11111);
+//                    console.log(c);
                 }
             })
 
