@@ -37,6 +37,8 @@
                     var img = "";
                     $.each(localIds,function(i,v){
                         img += v+',';
+                        console.log(i);
+                        console.log(v);
                         var node = "#imgs"+i;
                         $(node).attr('src',v);
                         //上传图片
