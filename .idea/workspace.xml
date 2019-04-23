@@ -59,13 +59,13 @@
       <file leaf-file-name="jssdk.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+            <state relative-caret-position="478">
+              <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
-                <marker date="1556017910086" expanded="true" signature="695:713" ph="..." />
-                <marker date="1556017910086" expanded="true" signature="755:777" ph="..." />
-                <marker date="1556017910086" expanded="true" signature="818:839" ph="..." />
-                <marker date="1556017910086" expanded="true" signature="881:903" ph="..." />
+                <marker date="1556018044885" expanded="true" signature="695:713" ph="..." />
+                <marker date="1556018044885" expanded="true" signature="755:777" ph="..." />
+                <marker date="1556018044885" expanded="true" signature="818:839" ph="..." />
+                <marker date="1556018044885" expanded="true" signature="881:903" ph="..." />
               </folding>
             </state>
           </provider>
@@ -443,12 +443,12 @@
       <workItem from="1555724276900" duration="3894000" />
       <workItem from="1555851993911" duration="12654000" />
       <workItem from="1555894042353" duration="27985000" />
-      <workItem from="1555980417473" duration="15057000" />
+      <workItem from="1555980417473" duration="15237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85513000" />
+    <option name="totallyTimeSpent" value="85693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -921,13 +921,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+        <state relative-caret-position="478">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
-            <marker date="1556017910086" expanded="true" signature="695:713" ph="..." />
-            <marker date="1556017910086" expanded="true" signature="755:777" ph="..." />
-            <marker date="1556017910086" expanded="true" signature="818:839" ph="..." />
-            <marker date="1556017910086" expanded="true" signature="881:903" ph="..." />
+            <marker date="1556018044885" expanded="true" signature="695:713" ph="..." />
+            <marker date="1556018044885" expanded="true" signature="755:777" ph="..." />
+            <marker date="1556018044885" expanded="true" signature="818:839" ph="..." />
+            <marker date="1556018044885" expanded="true" signature="881:903" ph="..." />
           </folding>
         </state>
       </provider>
