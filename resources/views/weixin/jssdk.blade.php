@@ -45,7 +45,7 @@
                             isShowProgressTips: 1, // 默认为1，显示进度提示
                             success: function (res1) {
                                 var serverId = res1.serverId; // 返回图片的服务器端ID
-                                //alert('serverID: '+ serverId);
+                                alert('serverID: '+ serverId);
                                 console.log(res1);
                             }
                         });
