@@ -339,11 +339,11 @@ class WxController extends Controller
             echo '欢迎'. $res->nickname.'回来';
         }else{
             echo '千万人中，你来到这个网站···'. $response2['nickname'];
-//                if ($response2['sex']==1){
-//                    $response2['sex']=='男';
-//                }else{
-//                    $response2['sex']=='女';
-//                }
+                if ($response2['sex']==1){
+                    $response2['sex']=='男';
+                }else{
+                    $response2['sex']=='女';
+                }
             $info = [
                 'openid' => $response2['openid'],
                 'nickname' => $response2['nickname'],
