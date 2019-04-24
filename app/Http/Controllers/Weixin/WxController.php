@@ -333,6 +333,31 @@ class WxController extends Controller
         $response2 = json_decode(file_get_contents($url2),true);
         echo '<pre>';print_r($response2);echo '</pre>';
 
+        $res = DB::table('wx_web_power')->where(['openid'=>$response2['openid']])->first();
+        if ($res){
+            echo '欢迎'. $res['nickname'].'回来';
+        }else{
+            echo '千万人中，你来到这个网站···'. $res['nickname'];
+
+                if ($response2['sex']==1){
+                    $response2['sex']=='男';
+                }else{
+                    $response2['sex']=='女';
+                }
+            $info = [
+                'openid' => $response2['openid'],
+                'nickname' => $response2['nickname'],
+                'sex' => $response2['sex'],
+                'city' => $response2['city'],
+                'province' => $response2['province'],
+                'country' => $response2['country'],
+                'headimgurl' => $response2['headimgurl'],
+
+            ];
+                $arr = DB::table('wx_web_power')->insert($info);
+
+        }
+
     }
 
 }
