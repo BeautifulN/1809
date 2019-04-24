@@ -354,7 +354,7 @@ class WxController extends Controller
                 'headimgurl' => $response2['headimgurl'],
 
             ];
-                $arr = DB::table('wx_web_power')->insert($info);
+                $arr = DB::table('wx_web_power')->insert($info);  //用户信息入库
 
         }
 
