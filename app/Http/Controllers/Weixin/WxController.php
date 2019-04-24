@@ -334,11 +334,11 @@ class WxController extends Controller
 //        echo '<pre>';print_r($response2);echo '</pre>';die;
 
         $res = DB::table('wx_web_power')->where(['openid'=>$response2['openid']])->first();
-        echo '<pre>';print_r($res);echo '</pre>';die;
+//        echo '<pre>';print_r($res);echo '</pre>';die;
         if ($res){
             echo '欢迎'. $res['nickname'].'回来';
         }else{
-            echo '千万人中，你来到这个网站···'. $res['nickname'];
+            echo '千万人中，你来到这个网站···'. $response2['nickname'];
 //                if ($response2['sex']==1){
 //                    $response2['sex']=='男';
 //                }else{
