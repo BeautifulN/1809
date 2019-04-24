@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 use App\Model\GoodsModel;
-
+use Illuminate\Support\Str;
 
 class IndexController extends Controller
 {
@@ -20,7 +20,29 @@ class IndexController extends Controller
 
         $arr = GoodsModel::where('goods_up',1)->get();
 
-        return view('index.index',['arr'=>$arr]);
+        //计算签名
+        $nonceStr = Str::random(10);
+        $ticket = getJsapiTicket();
+        $timestamp = time();
+        $current_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI'];
+//        print_r($current_url);exit;
+//        print_r($ticket);exit;
+
+        $string1 = "jsapi_ticket=$ticket&noncestr=$nonceStr&timestamp=$timestamp&url=$current_url";
+        $sign = sha1($string1);
+        print_r($sign);
+
+        $js_config = [
+            'appId'         => env('WX_APPID'),  //公众号APPID
+            'timestamp'     => $timestamp,  //时间
+            'nonceStr'      => $nonceStr,  //随机字符串
+            'signature'     => $sign,  //签名
+        ];
+        $data = [
+            'jsconfig' => $js_config
+        ];
+
+        return view('index.index',$data,['arr'=>$arr]);
     }
 
     /*
@@ -159,7 +181,7 @@ class IndexController extends Controller
     }
 
     public function jsconfig(){
-
+        $arr = GoodsModel::where('goods_up',1)->get();
         //计算签名
         $nonceStr = Str::random(10);
         $ticket = getJsapiTicket();
@@ -170,7 +192,7 @@ class IndexController extends Controller
 
         $string1 = "jsapi_ticket=$ticket&noncestr=$nonceStr&timestamp=$timestamp&url=$current_url";
         $sign = sha1($string1);
-//        print_r($sign);
+        print_r($sign);
 
         $js_config = [
             'appId'         => env('WX_APPID'),  //公众号APPID
@@ -181,7 +203,7 @@ class IndexController extends Controller
         $data = [
             'jsconfig' => $js_config
         ];
-        return  view('index.index',$data);
+        return  view('index.index',$data,['arr'=>$arr]);
     }
 }
 ?>
