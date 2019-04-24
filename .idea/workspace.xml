@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edf3eca9-2f85-4804-9dcf-7d45bee7a562" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" afterPath="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,16 +46,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jssdk.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jssdk.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1038">
-              <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+            <state relative-caret-position="342">
+              <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
               <folding>
-                <marker date="1556078681012" expanded="true" signature="729:747" ph="..." />
-                <marker date="1556078681012" expanded="true" signature="789:811" ph="..." />
-                <marker date="1556078681012" expanded="true" signature="852:873" ph="..." />
-                <marker date="1556078681012" expanded="true" signature="915:937" ph="..." />
+                <marker date="1556084432912" expanded="true" signature="729:747" ph="..." />
+                <marker date="1556084432912" expanded="true" signature="789:811" ph="..." />
+                <marker date="1556084432912" expanded="true" signature="852:873" ph="..." />
+                <marker date="1556084432912" expanded="true" signature="915:937" ph="..." />
               </folding>
             </state>
           </provider>
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="30">
               <caret line="131" column="80" lean-forward="false" selection-start-line="131" selection-start-column="80" selection-end-line="131" selection-end-column="80" />
               <folding>
                 <marker date="1556084162946" expanded="true" signature="4263:4657" ph="..." />
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/views/index/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
+        <option value="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
       </list>
     </option>
   </component>
@@ -454,12 +454,12 @@
       <workItem from="1555894042353" duration="27985000" />
       <workItem from="1555980417473" duration="27846000" />
       <workItem from="1556066210507" duration="1599000" />
-      <workItem from="1556076510376" duration="3072000" />
+      <workItem from="1556076510376" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102973000" />
+    <option name="totallyTimeSpent" value="103236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1936" height="1056" extended-state="0" />
@@ -869,19 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1038">
-          <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-          <folding>
-            <marker date="1556078681012" expanded="true" signature="729:747" ph="..." />
-            <marker date="1556078681012" expanded="true" signature="789:811" ph="..." />
-            <marker date="1556078681012" expanded="true" signature="852:873" ph="..." />
-            <marker date="1556078681012" expanded="true" signature="915:937" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
@@ -894,13 +881,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="30">
           <caret line="131" column="80" lean-forward="false" selection-start-line="131" selection-start-column="80" selection-end-line="131" selection-end-column="80" />
           <folding>
             <marker date="1556084162946" expanded="true" signature="4263:4657" ph="..." />
             <marker date="1556084162946" expanded="true" signature="4945:5736" ph="..." />
             <marker date="1556084162946" expanded="true" signature="5279:5709" ph="..." />
             <marker date="1556084162946" expanded="true" signature="5310:5677" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding>
+            <marker date="1556084432912" expanded="true" signature="729:747" ph="..." />
+            <marker date="1556084432912" expanded="true" signature="789:811" ph="..." />
+            <marker date="1556084432912" expanded="true" signature="852:873" ph="..." />
+            <marker date="1556084432912" expanded="true" signature="915:937" ph="..." />
           </folding>
         </state>
       </provider>

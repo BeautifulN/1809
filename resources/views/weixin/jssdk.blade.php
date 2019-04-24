@@ -65,7 +65,7 @@
                 }
             });
         });
-        $("#btn2").click(function(){
+        wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
             //分享给好友
             var link = "https://www.baidu.com/";
 
