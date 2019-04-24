@@ -73,7 +73,7 @@
                 title: '这是一个图片', // 分享标题
                 desc: '该写什么好呢', // 分享描述
                 link:  link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-                imgUrl: '', // 分享图标
+                imgUrl: 'http://1809lvmingjin.comcto.com/images/a1.jpg', // 分享图标
                 success: function (c) {
                     // 设置成功
 //                    console.log(c);
