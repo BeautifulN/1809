@@ -318,7 +318,7 @@ class WxController extends Controller
 
     public function scope(){
         echo '<pre>';print_r($_GET);echo '</pre>';
-        $code = $_GET['$code'];
+//        $code = $_GET['$code'];
     }
 
 }
