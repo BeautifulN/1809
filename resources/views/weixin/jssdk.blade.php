@@ -65,22 +65,21 @@
                 }
             });
         });
-        wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
-            //分享给好友
-            var link = "https://www.baidu.com/";
+    });
+    wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
+        //分享给好友
+        var link = "https://www.baidu.com/";
 
-            wx.updateAppMessageShareData({
-                title: '这是一个图片', // 分享标题
-                desc: '该写什么好呢', // 分享描述
-                link:  link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-                imgUrl: 'http://1809lvmingjin.comcto.com/images/a1.jpg', // 分享图标
-                success: function (c) {
-                    // 设置成功
-//                    console.log(c);
-                }
-            })
-
-        });
+        wx.updateAppMessageShareData({
+            title: '这是一个图片', // 分享标题
+            desc: '该写什么好呢', // 分享描述
+            link:  link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://1809lvmingjin.comcto.com/images/a1.jpg', // 分享图标
+            success: function () {
+                // 设置成功
+//                    console.log();
+            }
+        })
 
     });
 </script>
