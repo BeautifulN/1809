@@ -331,7 +331,7 @@ class WxController extends Controller
 
         $url2 = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
         $response2 = json_decode(file_get_contents($url2),true);
-        echo '<pre>';print_r($response2);echo '</pre>';
+        echo '<pre>';print_r($response2);echo '</pre>';die;
 
         $res = DB::table('wx_web_power')->where(['openid'=>$response2['openid']])->first();
         if ($res){
