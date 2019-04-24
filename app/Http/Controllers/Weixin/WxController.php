@@ -317,12 +317,12 @@ class WxController extends Controller
 
     //网页授权
     public function scope(){
-        echo '<pre>';print_r($_GET);echo '</pre>';  //打印code
+//        echo '<pre>';print_r($_GET);echo '</pre>';  //打印code
         $code = $_GET['code'];
         //code作为换取access_token的票据'.env('WX_APP_ID').'
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'&code='.$code.'&grant_type=authorization_code';
         $response = json_decode(file_get_contents($url),true);
-        echo '<pre>';print_r($response);echo '</pre>';  //['access_token']   ['openid']   ['refresh_token']   ['expires_in']   ['scope']
+//        echo '<pre>';print_r($response);echo '</pre>';  //['access_token']   ['openid']   ['refresh_token']   ['expires_in']   ['scope']
 
         $access_token = $response['access_token'];
         $openid = $response['openid'];
