@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>嘿嘿嘿</title>
+    <title>托马斯，污污污</title>
 </head>
 <body>
     <h1>商品展示</h1>
@@ -43,7 +43,7 @@
         timestamp: "{{$jsconfig['timestamp']}}", // 必填，生成签名的时间戳
         nonceStr: "{{$jsconfig['nonceStr']}}", // 必填，生成签名的随机串
         signature: "{{$jsconfig['signature']}}",// 必填，签名
-        jsApiList: ['chooseImage','uploadImage','updateAppMessageShareData'] // 必填，需要使用的JS接口列表
+        jsApiList: ['chooseImage','uploadImage','updateAppMessageShareData','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
     });
 
     wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
