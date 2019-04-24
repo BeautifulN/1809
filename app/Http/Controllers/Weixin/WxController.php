@@ -283,7 +283,7 @@ class WxController extends Controller
 
     }
 
-    //
+    //消息群发
     public function sendtext($openid,$content){
         //消息群发
 //        echo $content;
@@ -313,6 +313,12 @@ class WxController extends Controller
         $content = "嘿嘿嘿嘿";
         $response = $this->sendtext($openid,$content);
 //        return $response;
+    }
+
+
+    public function scope(){
+        echo '<pre>';print_r($_GET);echo '</pre>';
+        $code = $_GET['$code'];
     }
 
 }

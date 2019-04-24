@@ -65,7 +65,7 @@ Route::get('paystatus', 'Order\OrderController@paystatus');
 //微信JSSDK
 Route::get('jstest', 'Weixin\JssdkController@jstest');      //jssdk测试
 Route::get('getimg', 'Weixin\JssdkController@getimg');      //获取JSSDK上传的照片
-
+Route::get('scope', 'Weixin\WxController@scope');     //网页授权
 
 Auth::routes();
 
