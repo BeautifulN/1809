@@ -49,7 +49,7 @@ class OrderController extends Controller
     //订单展示
     public function lists(){
 
-        $arr = OrderModel::where('pay_status',1)->get();
+        $arr = OrderModel::where('is_del',1)->get();
 
         return view('order.lists',['arr'=>$arr]);
     }
@@ -75,5 +75,18 @@ class OrderController extends Controller
             die("订单不存在");
         }
         die(json_encode($response));
+    }
+
+    /*
+     * 删除过期订单 (每分钟查一次)
+     * */
+    public function delorder(){
+        echo __METHOD__."\n";
+        $all = OrderModel::all()->toArray();
+        foreach($all as $k=>$v){
+            if (time() - $v['create_time'] > 60 && $v['pay_status'] == 1){
+                OrderModel::where(['order_id'=>$v['order_id']])->update(['is_del'=>0]);
+            }
+        }
     }
 }

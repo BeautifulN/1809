@@ -192,7 +192,7 @@ class IndexController extends Controller
 
         $string1 = "jsapi_ticket=$ticket&noncestr=$nonceStr&timestamp=$timestamp&url=$current_url";
         $sign = sha1($string1);
-        print_r($sign);
+//        print_r($sign);
 
         $js_config = [
             'appId'         => env('WX_APPID'),  //公众号APPID

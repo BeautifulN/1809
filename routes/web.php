@@ -52,6 +52,8 @@ Route::get('cart', 'Cart\CartController@cart');
 Route::get('create', 'Order\OrderController@create');
 Route::get('lists', 'Order\OrderController@lists');
 
+Route::get('delorder', 'Order\OrderController@delorder');  //删除过期订单
+
 //微信支付
 Route::get('test/{order_id?}','Weixin\WxPayController@test');           //支付
 Route::post('notify','Weixin\WxPayController@notify');       //微信支付回调地址
