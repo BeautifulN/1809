@@ -41,6 +41,7 @@ Route::get('send', 'Weixin\WxController@send');
 
 //项目
 Route::get('indexx', 'Index\IndexController@index');
+
 Route::get('goodsdetail', 'Index\IndexController@goodsdetail');
 Route::get('history', 'Index\IndexController@history');
 
