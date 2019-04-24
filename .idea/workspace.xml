@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="edf3eca9-2f85-4804-9dcf-7d45bee7a562" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" afterPath="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="152" column="31" lean-forward="true" selection-start-line="152" selection-start-column="31" selection-end-line="152" selection-end-column="31" />
+            <state relative-caret-position="644">
+              <caret line="184" column="10" lean-forward="false" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
               <folding>
                 <element signature="e#46#70#0#PHP" expanded="true" />
               </folding>
@@ -46,16 +48,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jssdk.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jssdk.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+            <state relative-caret-position="342">
+              <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
               <folding>
-                <marker date="1556084672781" expanded="true" signature="729:747" ph="..." />
-                <marker date="1556084672781" expanded="true" signature="789:811" ph="..." />
-                <marker date="1556084672781" expanded="true" signature="852:873" ph="..." />
-                <marker date="1556084672781" expanded="true" signature="915:937" ph="..." />
+                <marker date="1556085018552" expanded="true" signature="737:755" ph="..." />
+                <marker date="1556085018552" expanded="true" signature="797:819" ph="..." />
+                <marker date="1556085018552" expanded="true" signature="860:881" ph="..." />
+                <marker date="1556085018552" expanded="true" signature="923:945" ph="..." />
               </folding>
             </state>
           </provider>
@@ -64,8 +66,8 @@
       <file leaf-file-name="JssdkController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state relative-caret-position="624">
+              <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding>
                 <element signature="e#47#75#0#PHP" expanded="true" />
               </folding>
@@ -76,13 +78,13 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="131" column="80" lean-forward="false" selection-start-line="131" selection-start-column="80" selection-end-line="131" selection-end-column="80" />
+            <state relative-caret-position="500">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
-                <marker date="1556084162946" expanded="true" signature="4263:4657" ph="..." />
-                <marker date="1556084162946" expanded="true" signature="4945:5736" ph="..." />
-                <marker date="1556084162946" expanded="true" signature="5279:5709" ph="..." />
-                <marker date="1556084162946" expanded="true" signature="5310:5677" ph="..." />
+                <marker date="1556084989980" expanded="true" signature="4263:4657" ph="..." />
+                <marker date="1556084989980" expanded="true" signature="4945:5736" ph="..." />
+                <marker date="1556084989980" expanded="true" signature="5279:5709" ph="..." />
+                <marker date="1556084989980" expanded="true" signature="5310:5677" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,10 +144,10 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/views/index/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
         <option value="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
       </list>
     </option>
   </component>
@@ -454,12 +456,12 @@
       <workItem from="1555894042353" duration="27985000" />
       <workItem from="1555980417473" duration="27846000" />
       <workItem from="1556066210507" duration="1599000" />
-      <workItem from="1556076510376" duration="3585000" />
+      <workItem from="1556076510376" duration="3943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103486000" />
+    <option name="totallyTimeSpent" value="103844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="0" width="1936" height="1056" extended-state="0" />
@@ -828,16 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="152" column="31" lean-forward="true" selection-start-line="152" selection-start-column="31" selection-end-line="152" selection-end-column="31" />
-          <folding>
-            <element signature="e#46#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxPayController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2496">
@@ -869,38 +861,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="e#47#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="131" column="80" lean-forward="false" selection-start-line="131" selection-start-column="80" selection-end-line="131" selection-end-column="80" />
+        <state relative-caret-position="500">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <marker date="1556084162946" expanded="true" signature="4263:4657" ph="..." />
-            <marker date="1556084162946" expanded="true" signature="4945:5736" ph="..." />
-            <marker date="1556084162946" expanded="true" signature="5279:5709" ph="..." />
-            <marker date="1556084162946" expanded="true" signature="5310:5677" ph="..." />
+            <marker date="1556084989980" expanded="true" signature="4263:4657" ph="..." />
+            <marker date="1556084989980" expanded="true" signature="4945:5736" ph="..." />
+            <marker date="1556084989980" expanded="true" signature="5279:5709" ph="..." />
+            <marker date="1556084989980" expanded="true" signature="5310:5677" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+        <state relative-caret-position="342">
+          <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
           <folding>
-            <marker date="1556084672781" expanded="true" signature="729:747" ph="..." />
-            <marker date="1556084672781" expanded="true" signature="789:811" ph="..." />
-            <marker date="1556084672781" expanded="true" signature="852:873" ph="..." />
-            <marker date="1556084672781" expanded="true" signature="915:937" ph="..." />
+            <marker date="1556085018552" expanded="true" signature="737:755" ph="..." />
+            <marker date="1556085018552" expanded="true" signature="797:819" ph="..." />
+            <marker date="1556085018552" expanded="true" signature="860:881" ph="..." />
+            <marker date="1556085018552" expanded="true" signature="923:945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#47#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="184" column="10" lean-forward="false" selection-start-line="184" selection-start-column="10" selection-end-line="184" selection-end-column="10" />
+          <folding>
+            <element signature="e#46#70#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

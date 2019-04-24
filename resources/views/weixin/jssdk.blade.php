@@ -15,7 +15,7 @@
 <hr>
 <img src="" alt="" id="imgs1"  width="300">
 
-<button id="btn2">分享给好友</button>
+{{--<button id="btn2">分享给好友</button>--}}
 
 <script src="/js/jquery/jquery-1.12.4.min.js"></script>
 <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js "></script>
@@ -68,7 +68,7 @@
     });
     wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
         //分享给好友
-        var link = "https://www.baidu.com/";
+        var link = "http://1809lvmingjin.comcto.com/indexx";
 
         wx.updateAppMessageShareData({
             title: '这是一个图片', // 分享标题
