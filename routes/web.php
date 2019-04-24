@@ -44,6 +44,7 @@ Route::get('indexx', 'Index\IndexController@index');
 
 Route::get('goodsdetail', 'Index\IndexController@goodsdetail');
 Route::get('history', 'Index\IndexController@history');
+Route::get('jsconfig', 'Index\IndexController@jsconfig');
 
 Route::any('add/{goods_id?}', 'Index\IndexController@add');
 Route::get('cart', 'Cart\CartController@cart');
