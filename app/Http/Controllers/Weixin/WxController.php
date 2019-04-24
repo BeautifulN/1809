@@ -340,9 +340,9 @@ class WxController extends Controller
         }else{
             echo '千万人中，你来到这个网站···'. $response2['nickname'];
                 if ($response2['sex']==1){
-                    $response2['sex']=='男';
+                    $response2['sex'] ='男';
                 }else{
-                    $response2['sex']=='女';
+                    $response2['sex'] ='女';
                 }
             $info = [
                 'openid' => $response2['openid'],
