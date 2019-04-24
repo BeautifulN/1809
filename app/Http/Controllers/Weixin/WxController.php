@@ -129,7 +129,7 @@ class WxController extends Controller
                             <Title><![CDATA['.$title.']]></Title> 
                             <Description><![CDATA[猜猜是什么？！]]></Description>
                             <PicUrl><![CDATA[http://1809lvmingjin.comcto.com/images/a1.jpg]]></PicUrl>
-                            <Url><![CDATA[http://dangjian.people.com.cn/]]></Url>
+                            <Url><![CDATA[http://1809lvmingjin.comcto.com/indexx]]></Url>
                         </item>
                     </Articles>
                     </xml>';
