@@ -23,8 +23,24 @@ Route::get('/', function () {
 //Route::get('getuser', 'Weixin\WxController@getuser');
 //Route::post('menu2', 'Weixin\WxController@menu2');
 
+//微信
+Route::get('index', 'Weixin\WxController@index');
+Route::any('index', 'Weixin\WxController@wxEvent');
+Route::any('wxEvent', 'Weixin\WxController@wxEvent');
+
+
+Route::get('token', 'Weixin\WxController@token');
+Route::get('text', 'Weixin\WxController@text');
+Route::get('getuser', 'Weixin\WxController@getuser');
+Route::post('menu', 'Weixin\WxController@menu');
+Route::post('news', 'Weixin\WxController@news');
+
+Route::post('sendtext', 'Weixin\WxController@sendtext');
+Route::get('send', 'Weixin\WxController@send');
+
+
 //项目
-Route::get('index', 'Index\IndexController@index');
+Route::get('indexx', 'Index\IndexController@index');
 Route::get('goodsdetail', 'Index\IndexController@goodsdetail');
 Route::get('history', 'Index\IndexController@history');
 

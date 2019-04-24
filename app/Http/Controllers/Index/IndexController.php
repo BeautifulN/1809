@@ -121,14 +121,14 @@ class IndexController extends Controller
 
             //商品是否上架
             if ($goods->goods_up > 1 ){
-                header("Refresh:3;url=index");
+                header("Refresh:3;url=indexx");
                 echo "该商品已下架，请重新选择商品";
                 die;
             }
 
             //商品库存是否充足
             if ($goods->goods_num == 0 ){
-                header("Refresh:3;url=index");
+                header("Refresh:3;url=indexx");
                 echo "该商品库存不足，请重新选择商品";
                 die;
             }
@@ -149,7 +149,7 @@ class IndexController extends Controller
                 header('Refresh:3;url=/cart');
                 die("添加购物车成功，自动跳转至购物车");
             }else{
-                header('Refresh:3;url=/index');
+                header('Refresh:3;url=/indexx');
                 die("添加购物车失败");
             }
 
