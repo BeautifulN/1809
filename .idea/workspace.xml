@@ -36,14 +36,24 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="324" column="0" lean-forward="true" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+            <state relative-caret-position="654">
+              <caret line="327" column="5" lean-forward="true" selection-start-line="327" selection-start-column="5" selection-end-line="327" selection-end-column="5" />
               <folding>
-                <marker date="1556102219697" expanded="true" signature="4263:4657" ph="..." />
-                <marker date="1556102219697" expanded="true" signature="4945:5736" ph="..." />
-                <marker date="1556102219697" expanded="true" signature="5279:5709" ph="..." />
-                <marker date="1556102219697" expanded="true" signature="5310:5677" ph="..." />
+                <marker date="1556102563828" expanded="true" signature="4263:4657" ph="..." />
+                <marker date="1556102563828" expanded="true" signature="4945:5736" ph="..." />
+                <marker date="1556102563828" expanded="true" signature="5279:5709" ph="..." />
+                <marker date="1556102563828" expanded="true" signature="5310:5677" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -467,12 +477,12 @@
       <workItem from="1555894042353" duration="27985000" />
       <workItem from="1555980417473" duration="27846000" />
       <workItem from="1556066210507" duration="1599000" />
-      <workItem from="1556076510376" duration="12373000" />
+      <workItem from="1556076510376" duration="12704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112274000" />
+    <option name="totallyTimeSpent" value="112605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -798,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -910,15 +913,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="43" column="37" lean-forward="false" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="324" column="0" lean-forward="true" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+        <state relative-caret-position="654">
+          <caret line="327" column="5" lean-forward="true" selection-start-line="327" selection-start-column="5" selection-end-line="327" selection-end-column="5" />
           <folding>
-            <marker date="1556102219697" expanded="true" signature="4263:4657" ph="..." />
-            <marker date="1556102219697" expanded="true" signature="4945:5736" ph="..." />
-            <marker date="1556102219697" expanded="true" signature="5279:5709" ph="..." />
-            <marker date="1556102219697" expanded="true" signature="5310:5677" ph="..." />
+            <marker date="1556102563828" expanded="true" signature="4263:4657" ph="..." />
+            <marker date="1556102563828" expanded="true" signature="4945:5736" ph="..." />
+            <marker date="1556102563828" expanded="true" signature="5279:5709" ph="..." />
+            <marker date="1556102563828" expanded="true" signature="5310:5677" ph="..." />
           </folding>
         </state>
       </provider>
