@@ -78,7 +78,7 @@ class WxController extends Controller
                     'subscribe_time' => $userinfo['subscribe_time'],
                 ];
 
-                $sql = DB::table('wx_address')->i53nsertGetId($info);
+                $sql = DB::table('wx_address')->insertGetId($info);
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
 
             }
