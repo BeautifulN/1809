@@ -26,6 +26,7 @@ class WxController extends Controller
     public function wxEvent(){
         //接收微信服务器推送
         $content = file_get_contents("php://input");
+//        print_r($content);die;
 
         $time = date('Y-m-d H:i:s');
 
@@ -34,7 +35,7 @@ class WxController extends Controller
         file_put_contents("logs/wx_event.log",$srt,FILE_APPEND);
 
         $obj = simplexml_load_string($content); //把xml转换成对象
-//        print_r($obj);
+        echo '<pre>';print_r($obj);echo '</pre>';die;
 //        获取相应的字段 (对象格式)
 //        $openid = $obj['FromUserName'];  //用户openid
         $openid = $obj->FromUserName;  //用户openid
@@ -45,7 +46,9 @@ class WxController extends Controller
         $content = $obj->Content;
         $media_id = $obj->MediaId;
 
-//        print_r($msgtype);
+        $eventkey = $obj->EventKey;
+        $ticket = $obj->Ticket;
+//        print_r($ticket);die;
 //        echo 'ToUserName:'.$obj->ToUserName;echo"</br>";//微信号
 //        echo 'FromUserName:'.$obj->FromUserName;echo"</br>";//用户openid
 //        echo 'CreateTime:'.$obj->CreateTime;echo"</br>";//推送时间
@@ -98,6 +101,7 @@ class WxController extends Controller
                 ];
 
                 $sql = DB::table('wx_address')->insertGetId($info);
+
                 $title = "欢迎关注";
 //                $openid = $openid;
 //                $wxid = $wxid;
@@ -118,7 +122,21 @@ class WxController extends Controller
                     </xml>';
 //                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
             }
+            if($event=='SCAN'){
+
+                $info2 = [
+//                'id' => $userinfo['subscribe'],
+                    'openid' => $openid,
+                    'nickname' => $wxid,
+                    'eventkey' => $eventkey,
+                    'ticket' => $ticket,
+                    'createtime' => $createtime,
+                ];
+                $sql = DB::table('wx_web_power')->insertGetId($info2);
+            }
+
         }
+
 
         //获取消息素材
         if ($msgtype=='text'){   //文本素材
@@ -426,7 +444,7 @@ class WxController extends Controller
         ]);
 
         //处理响应
-//        echo  $response->getBody();
+        echo  $response->getBody();
         $res = $response->getBody();
 
         $arr = json_decode($res,true);
