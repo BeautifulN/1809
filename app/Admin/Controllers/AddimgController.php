@@ -79,9 +79,5 @@ class AddimgController extends Controller
                 ->description('description')
                 ->body(view('admin.weixin.addimg'));
         }
-        return $content
-            ->header('Index')
-            ->description('description')
-            ->body(view('admin.weixin.addimg'));
     }
 }

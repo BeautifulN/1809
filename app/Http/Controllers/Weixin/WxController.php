@@ -362,4 +362,49 @@ class WxController extends Controller
 
     }
 
+    public function code(){
+        $url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.getWxAccessToken();
+//        echo '<pre>';print_r($url);echo '</pre>';die;
+
+        $arr = [
+            "action_name" => 'QR_STR_SCENE',
+            "expire_seconds" => "604800",
+            "action_info" =>[
+                "scene" =>[
+                    "scene_str" => "111",
+                ]
+            ]
+
+        ];
+
+//        echo '<pre>';print_r($arr);echo '</pre>';die;
+
+        $json = json_encode($arr,JSON_UNESCAPED_UNICODE);  //处理中文
+//            var_dump($json);die;
+        //发送请求
+        $client = new Client();  //实例化guzzle  (post)
+
+        $response = $client->request('POST',$url,[
+            'body' => $json
+        ]);
+
+        //处理响应
+//        echo  $response->getBody();
+        $res = $response->getBody();
+
+        $arr = json_decode($res,true);
+//        echo '<pre>';print_r($arr);echo '</pre>';die;
+        $ticket = $arr['ticket'];
+
+        return $ticket;
+
+    }
+
+    public function codes(){
+        $ticket = $this->code();
+//        echo '<pre>';print_r($ticket);echo '</pre>';die;
+        return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=$ticket";
+
+    }
+
 }
