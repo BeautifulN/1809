@@ -37,20 +37,20 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="86" column="42" lean-forward="false" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+            <state relative-caret-position="192">
+              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
               <folding>
                 <element signature="e#47#75#0#PHP" expanded="true" />
-                <marker date="1556441952986" expanded="true" signature="2076:2867" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="2410:2840" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="2441:2808" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="3688:4479" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="4022:4452" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="4053:4420" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="6131:6525" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="6813:7604" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="7147:7577" ph="..." />
-                <marker date="1556441952986" expanded="true" signature="7178:7545" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="2064:2855" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="2398:2828" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="2429:2796" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="3665:4456" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="3999:4429" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="4030:4397" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="6108:6502" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="6790:7581" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="7124:7554" ph="..." />
+                <marker date="1556442280167" expanded="true" signature="7155:7522" ph="..." />
               </folding>
             </state>
           </provider>
@@ -486,12 +486,12 @@
       <workItem from="1556152580021" duration="10541000" />
       <workItem from="1556239396805" duration="23081000" />
       <workItem from="1556371428505" duration="12390000" />
-      <workItem from="1556432713539" duration="8681000" />
+      <workItem from="1556432713539" duration="9002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173254000" />
+    <option name="totallyTimeSpent" value="173575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -885,20 +885,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="86" column="42" lean-forward="false" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+        <state relative-caret-position="192">
+          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
           <folding>
             <element signature="e#47#75#0#PHP" expanded="true" />
-            <marker date="1556441952986" expanded="true" signature="2076:2867" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="2410:2840" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="2441:2808" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="3688:4479" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="4022:4452" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="4053:4420" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="6131:6525" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="6813:7604" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="7147:7577" ph="..." />
-            <marker date="1556441952986" expanded="true" signature="7178:7545" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="2064:2855" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="2398:2828" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="2429:2796" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="3665:4456" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="3999:4429" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="4030:4397" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="6108:6502" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="6790:7581" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="7124:7554" ph="..." />
+            <marker date="1556442280167" expanded="true" signature="7155:7522" ph="..." />
           </folding>
         </state>
       </provider>

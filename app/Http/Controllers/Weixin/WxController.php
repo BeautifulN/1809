@@ -67,7 +67,7 @@ class WxController extends Controller
                 $title = "欢迎回来";
 //                $openid = $openid;
 //                $wxid = $wxid;
-                echo $itemTpl = '<xml>
+                echo'<xml>
                     <ToUserName><![CDATA['.$openid.']]></ToUserName>
                     <FromUserName><![CDATA['.$wxid.']]></FromUserName>
                     <CreateTime>'.time().'</CreateTime>
@@ -101,7 +101,7 @@ class WxController extends Controller
                 $title = "欢迎关注";
 //                $openid = $openid;
 //                $wxid = $wxid;
-                echo $itemTpl = '<xml>
+                echo '<xml>
                     <ToUserName><![CDATA['.$openid.']]></ToUserName>
                     <FromUserName><![CDATA['.$wxid.']]></FromUserName>
                     <CreateTime>'.time().'</CreateTime>
