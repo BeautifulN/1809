@@ -11,6 +11,8 @@ class OrderModel extends Model
 
     public $timestamps = false;
 
+    protected  $primaryKey="order_id";
+
     public static function generateOrderSN($user_id)
     {
         $order_amount = 'a1809a_'. date("ymdH");

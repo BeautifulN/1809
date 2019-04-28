@@ -33,7 +33,7 @@ class CartController extends Controller
             ];
             return view('cart.cart', $data);
         } else {
-            header('Refresh:3;url=/index');
+            header('Refresh:3;url=/indexx');
             die("购物车为空,跳转至首页");
         }
     }

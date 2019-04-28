@@ -148,8 +148,8 @@ class WxController extends Controller
             $access=$this->token();
             $url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=$access&media_id=$media_id";
             $time = time();
-            $str = file_get_contents($url);
-            file_put_contents("/wwwroot/1809ashop/image/$time.jpg",$str,FILE_APPEND);
+            $str = file_get_contents("php://input");
+            file_put_contents("image/$time.jpg",$str,FILE_APPEND);
             $image = '/wwwroot/1809ashop/image/'.$time.'.jpg';
 //                print_r($image);exit;
             $arr = [
@@ -269,6 +269,8 @@ class WxController extends Controller
         $response = $clinet->request('POST',$url,[
             'body' => $str
         ]);
+
+        print_r($response);
         //处理响应回来
         $res = $response->getBody();
         //
