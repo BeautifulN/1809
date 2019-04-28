@@ -63,6 +63,25 @@ class WxController extends Controller
             //如果用户之前关注过
             if ($user) {
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>' . time() . '</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'来了，老弟儿~' . $user->nickname . ']]></Content></xml>';
+
+                $title = "最新商品";
+                $openid = $openid;
+                $wxid = $wxid;
+                echo $itemTpl = '<xml>
+                    <ToUserName><![CDATA['.$openid.']]></ToUserName>
+                    <FromUserName><![CDATA['.$wxid.']]></FromUserName>
+                    <CreateTime>'.time().'</CreateTime>
+                    <MsgType><![CDATA[news]]></MsgType>
+                    <ArticleCount>1</ArticleCount>
+                    <Articles>
+                        <item>
+                            <Title><![CDATA['.$title.']]></Title> 
+                            <Description><![CDATA[猜猜是什么？！]]></Description>
+                            <PicUrl><![CDATA[http://1809lvmingjin.comcto.com/images/a1.jpg]]></PicUrl>
+                            <Url><![CDATA[http://1809lvmingjin.comcto.com/indexx]]></Url>
+                        </item>
+                    </Articles>
+                    </xml>';
             }else{
 ///               获取用户的信息
                 $userinfo = $this->getuser($openid);
@@ -81,6 +100,24 @@ class WxController extends Controller
                 $sql = DB::table('wx_address')->insertGetId($info);
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
 
+                $title = "最新商品";
+                $openid = $openid;
+                $wxid = $wxid;
+                echo $itemTpl = '<xml>
+                    <ToUserName><![CDATA['.$openid.']]></ToUserName>
+                    <FromUserName><![CDATA['.$wxid.']]></FromUserName>
+                    <CreateTime>'.time().'</CreateTime>
+                    <MsgType><![CDATA[news]]></MsgType>
+                    <ArticleCount>1</ArticleCount>
+                    <Articles>
+                        <item>
+                            <Title><![CDATA['.$title.']]></Title> 
+                            <Description><![CDATA[猜猜是什么？！]]></Description>
+                            <PicUrl><![CDATA[http://1809lvmingjin.comcto.com/images/a1.jpg]]></PicUrl>
+                            <Url><![CDATA[http://1809lvmingjin.comcto.com/indexx]]></Url>
+                        </item>
+                    </Articles>
+                    </xml>';
             }
         }
 
@@ -135,7 +172,6 @@ class WxController extends Controller
                     </xml>';
             }
 
-
             $info = [
                 'openid' => $openid,
 //                'nickname' => $nickname,
@@ -174,6 +210,8 @@ class WxController extends Controller
             ];
             $sql = DB::table('wx_voice')->insertGetId($arr);
         }
+
+
 
     }
 
@@ -397,14 +435,13 @@ class WxController extends Controller
         $ticket = $arr['ticket'];
 
         return $ticket;
-
     }
 
     public function codes(){
         $ticket = $this->code();
 //        echo '<pre>';print_r($ticket);echo '</pre>';die;
         return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=$ticket";
-
     }
+
 
 }
