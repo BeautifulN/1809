@@ -64,9 +64,9 @@ class WxController extends Controller
             if ($user) {
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>' . time() . '</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'来了，老弟儿~' . $user->nickname . ']]></Content></xml>';
 
-                $title = "最新商品";
-                $openid = $openid;
-                $wxid = $wxid;
+                $title = "欢迎回来";
+//                $openid = $openid;
+//                $wxid = $wxid;
                 echo $itemTpl = '<xml>
                     <ToUserName><![CDATA['.$openid.']]></ToUserName>
                     <FromUserName><![CDATA['.$wxid.']]></FromUserName>
@@ -98,11 +98,9 @@ class WxController extends Controller
                 ];
 
                 $sql = DB::table('wx_address')->insertGetId($info);
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
-
-                $title = "最新商品";
-                $openid = $openid;
-                $wxid = $wxid;
+                $title = "欢迎关注";
+//                $openid = $openid;
+//                $wxid = $wxid;
                 echo $itemTpl = '<xml>
                     <ToUserName><![CDATA['.$openid.']]></ToUserName>
                     <FromUserName><![CDATA['.$wxid.']]></FromUserName>
@@ -118,6 +116,7 @@ class WxController extends Controller
                         </item>
                     </Articles>
                     </xml>';
+                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
             }
         }
 
