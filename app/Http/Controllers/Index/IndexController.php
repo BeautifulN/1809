@@ -108,7 +108,11 @@ class IndexController extends Controller
 
         $arr = GoodsModel::where('goods_id',$goods_id)->get();  //商品详情
 
-        return view('index.goodsdetail',['arr'=>$arr,'info'=>$info,'data'=>$data]);
+        $code_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI'];
+
+        print_r($code_url);
+
+        return view('index.goodsdetail',['arr'=>$arr,'info'=>$info,'data'=>$data,'code_url'=>$code_url]);
     }
 
 //    /*

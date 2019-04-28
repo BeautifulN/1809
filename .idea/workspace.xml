@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="edf3eca9-2f85-4804-9dcf-7d45bee7a562" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php" afterPath="$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,30 +28,45 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="456">
               <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
+      <file leaf-file-name="goodsdetail.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6378">
-              <caret line="124" column="33" lean-forward="true" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
+            <state relative-caret-position="620">
+              <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding>
-                <element signature="e#47#75#0#PHP" expanded="true" />
-                <marker date="1556446416882" expanded="true" signature="2205:2996" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="2539:2969" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="2570:2937" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="3807:4598" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="4141:4571" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="4172:4539" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="6709:7103" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="7391:8182" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="7725:8155" ph="..." />
-                <marker date="1556446416882" expanded="true" signature="7756:8123" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="512:526" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="582:596" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="602:618" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="648:669" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="726:740" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1117:1133" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1159:1177" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1203:1226" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1252:1269" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1537:1553" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1579:1597" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1623:1646" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1672:1689" ph="..." />
+                <marker date="1556451333173" expanded="true" signature="1991:2000" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-912">
+              <caret line="112" column="27" lean-forward="false" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+              <folding>
+                <element signature="e#46#70#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,6 +94,7 @@
       <find>getBody</find>
       <find>sendText</find>
       <find>图文</find>
+      <find>code_url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,16 +117,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WXBizDataCryptController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/weixin/success.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/weixin/text.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxPayController.php" />
         <option value="$PROJECT_DIR$/resources/views/order/lists.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Helper/function.php" />
         <option value="$PROJECT_DIR$/app/Http/Helper/functions.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Order/OrderController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/views/index/index.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/GoodsController.php" />
@@ -125,10 +138,14 @@
         <option value="$PROJECT_DIR$/app/Admin/routes.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/weixin/news.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/AddimgController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php" />
+        <option value="$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/weixin/text.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php" />
+        <option value="$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php" />
       </list>
     </option>
   </component>
@@ -204,6 +221,10 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -215,7 +236,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weixin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,24 +295,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1809" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1809" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,6 +361,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Weixin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Order" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1809" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cart" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,12 +599,12 @@
       <workItem from="1556152580021" duration="10541000" />
       <workItem from="1556239396805" duration="23081000" />
       <workItem from="1556371428505" duration="12390000" />
-      <workItem from="1556432713539" duration="13115000" />
+      <workItem from="1556432713539" duration="17618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177688000" />
+    <option name="totallyTimeSpent" value="182191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -513,7 +638,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -581,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/weixin/success.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/cart/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -606,20 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="818" column="10" lean-forward="true" selection-start-line="818" selection-start-column="10" selection-end-line="818" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/weixin/text.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3144">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -649,20 +753,6 @@
         <state relative-caret-position="192">
           <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -745,13 +835,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/images/a2.jpg" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3412">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -772,13 +855,6 @@
         <state relative-caret-position="297">
           <caret line="1046" column="9" lean-forward="false" selection-start-line="1046" selection-start-column="9" selection-end-line="1046" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Order/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -809,6 +885,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -823,22 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="40" column="89" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxPayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1492">
-          <caret line="98" column="48" lean-forward="false" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -863,18 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6378">
-          <caret line="124" column="33" lean-forward="true" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
+        <state relative-caret-position="5280">
+          <caret line="334" column="30" lean-forward="true" selection-start-line="334" selection-start-column="30" selection-end-line="334" selection-end-column="30" />
           <folding>
             <element signature="e#47#75#0#PHP" expanded="true" />
             <marker date="1556446416882" expanded="true" signature="2205:2996" ph="..." />
@@ -887,6 +940,133 @@
             <marker date="1556446416882" expanded="true" signature="7391:8182" ph="..." />
             <marker date="1556446416882" expanded="true" signature="7725:8155" ph="..." />
             <marker date="1556446416882" expanded="true" signature="7756:8123" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1556094576029" expanded="true" signature="541:555" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="611:625" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="631:647" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="677:698" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="724:739" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="796:810" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="1255:1273" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="1315:1337" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="1378:1399" ph="..." />
+            <marker date="1556094576029" expanded="true" signature="1441:1463" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/weixin/success.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/weixin/text.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1580">
+          <caret line="112" column="31" lean-forward="true" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
+          <folding>
+            <marker date="1556450944705" expanded="true" signature="30:73" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="1567:1581" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="1639:1655" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="1746:1765" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="2657:2673" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="2843:2859" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="3425:3434" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="3554:3563" ph="..." />
+            <marker date="1556450944705" expanded="true" signature="3785:3794" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Order/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxPayController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <element signature="e#47#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/JssdkController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Index/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912">
+          <caret line="112" column="27" lean-forward="false" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+          <folding>
+            <element signature="e#46#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/weixin/jssdk.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1556450892151" expanded="true" signature="737:755" ph="..." />
+            <marker date="1556450892151" expanded="true" signature="797:819" ph="..." />
+            <marker date="1556450892151" expanded="true" signature="860:881" ph="..." />
+            <marker date="1556450892151" expanded="true" signature="923:945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index/goodsdetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+          <folding>
+            <marker date="1556451333173" expanded="true" signature="512:526" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="582:596" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="602:618" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="648:669" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="726:740" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1117:1133" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1159:1177" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1203:1226" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1252:1269" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1537:1553" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1579:1597" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1623:1646" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1672:1689" ph="..." />
+            <marker date="1556451333173" expanded="true" signature="1991:2000" ph="..." />
           </folding>
         </state>
       </provider>
