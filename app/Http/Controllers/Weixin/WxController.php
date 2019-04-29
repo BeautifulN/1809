@@ -479,6 +479,11 @@ class WxController extends Controller
             $arr = DB::table('wx_web_power')->insert($info);  //用户信息入库
 
         }
+        echo "<h1>" .$response2['nickname'].": 签到成功</h1>";
+        $key = '1:wx_sign:' . $response2['openid'];
+        Redis::lPush($key,date('Y-m-d H:i:s'));
+        $record = Redis::lRange($key,0,-1);
+        echo '<pre>';print_r($record);echo '</pre>';
 
     }
 
