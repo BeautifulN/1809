@@ -304,7 +304,13 @@ class WxController extends Controller
                 [
                     "type" => "view",
                     "name" => "最新福利",
-                    "url" => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx88877ae88c12e2a2&redirect_uri=http://1809lvmingjin.comcto.com/scope&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+                    "url"  => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx88877ae88c12e2a2&redirect_uri=http://1809lvmingjin.comcto.com/scope&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+                ],
+
+                [
+                    "type" => "view",
+                    "name" => "点击签到",
+                    "url"  => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx88877ae88c12e2a2&redirect_uri=http://1809lvmingjin.comcto.com/sign&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
                 ],
 
                 [ "name" => "点我嘿嘿嘿",
@@ -430,6 +436,54 @@ class WxController extends Controller
         }
 
     }
+
+    //网页授权签到
+    public function sign(){
+//        echo '<pre>';print_r($_GET);echo '</pre>';  //打印code
+        $code = $_GET['code'];
+//        code作为换取access_token的票据'.env('WX_APP_ID').'
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'&code='.$code.'&grant_type=authorization_code';
+        $response = json_decode(file_get_contents($url),true);
+//        echo '<pre>';print_r($response);echo '</pre>';  //['access_token']   ['openid']   ['refresh_token']   ['expires_in']   ['scope']
+
+        $access_token = $response['access_token'];
+        $openid = $response['openid'];
+
+//        echo '<pre>';print_r($access_token);echo '</pre>';die;
+
+        $url2 = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
+        $response2 = json_decode(file_get_contents($url2),true);
+//        echo '<pre>';print_r($response2);echo '</pre>';die;
+
+        $res = DB::table('wx_web_power')->where(['openid'=>$response2['openid']])->first();
+//        echo '<pre>';print_r($res);echo '</pre>';die;
+        if ($res){
+            echo '又来签到了'. $res->nickname.'老弟';
+            header('Refresh:3;url=/indexx');
+        }else{
+            echo '千万人中，你来到这个签到网站···'. $response2['nickname'];
+            if ($response2['sex']==1){
+                $response2['sex'] ='男';
+            }else{
+                $response2['sex'] ='女';
+            }
+            $info = [
+                'openid' => $response2['openid'],
+                'nickname' => $response2['nickname'],
+                'sex' => $response2['sex'],
+                'city' => $response2['city'],
+                'province' => $response2['province'],
+                'country' => $response2['country'],
+                'headimgurl' => $response2['headimgurl'],
+
+            ];
+            $arr = DB::table('wx_web_power')->insert($info);  //用户信息入库
+
+        }
+
+    }
+
+
 
     //带参数的二维码
     public function code(){
