@@ -94,7 +94,7 @@ class OrderController extends Controller
         $grid->pay_time('Pay time');
         $grid->create_time('Create time');
         $grid->is_del('Is del');
-
+        $grid->image('Image')->image();
         return $grid;
     }
 
@@ -121,7 +121,7 @@ class OrderController extends Controller
         $show->pay_time('Pay time');
         $show->create_time('Create time');
         $show->is_del('Is del');
-
+        $show->image('Image');
         return $show;
     }
 
@@ -147,7 +147,7 @@ class OrderController extends Controller
         $form->number('pay_time', 'Pay time');
         $form->number('create_time', 'Create time');
         $form->text('is_del', 'Is del')->default('1');
-
+        $form->image('image', 'Path image');
         return $form;
     }
 }

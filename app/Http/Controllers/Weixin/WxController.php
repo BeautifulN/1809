@@ -303,8 +303,8 @@ class WxController extends Controller
 
                 [
                     "type" => "view",
-                    "name" => "百度一下",
-                    "url" => "http://www.baidu.com/"
+                    "name" => "最新福利",
+                    "url" => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx88877ae88c12e2a2&redirect_uri=http://1809lvmingjin.comcto.com/scope&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
                 ],
 
                 [ "name" => "点我嘿嘿嘿",
@@ -389,7 +389,7 @@ class WxController extends Controller
     public function scope(){
 //        echo '<pre>';print_r($_GET);echo '</pre>';  //打印code
         $code = $_GET['code'];
-        //code作为换取access_token的票据'.env('WX_APP_ID').'
+//        code作为换取access_token的票据'.env('WX_APP_ID').'
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_SECRET').'&code='.$code.'&grant_type=authorization_code';
         $response = json_decode(file_get_contents($url),true);
 //        echo '<pre>';print_r($response);echo '</pre>';  //['access_token']   ['openid']   ['refresh_token']   ['expires_in']   ['scope']
@@ -430,6 +430,7 @@ class WxController extends Controller
 
     }
 
+    //带参数的二维码
     public function code(){
         $url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.getWxAccessToken();
 //        echo '<pre>';print_r($url);echo '</pre>';die;
