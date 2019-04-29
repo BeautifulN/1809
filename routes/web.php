@@ -66,6 +66,7 @@ Route::get('paystatus', 'Order\OrderController@paystatus');
 Route::get('jstest', 'Weixin\JssdkController@jstest');      //jssdk测试
 Route::get('getimg', 'Weixin\JssdkController@getimg');      //获取JSSDK上传的照片
 Route::get('scope', 'Weixin\WxController@scope');     //网页授权
+Route::get('sign', 'Weixin\WxController@sign');     //网页授权
 
 //带参数的二维码
 Route::get('code', 'Weixin\WxController@code');
