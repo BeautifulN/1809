@@ -407,7 +407,7 @@ class WxController extends Controller
 //        echo '<pre>';print_r($res);echo '</pre>';die;
         if ($res){
             echo '欢迎'. $res->nickname.'回来';
-            header('Refresh:3;url=/lists');
+            header('Refresh:3;url=/indexx');
         }else{
             echo '千万人中，你来到这个网站···'. $response2['nickname'];
                 if ($response2['sex']==1){
