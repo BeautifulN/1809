@@ -70,6 +70,7 @@
 </table>
 <hr/>
 <hr/>
+
 <div id="qrcode" type="center">
 
 </div>

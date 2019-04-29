@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Redis;
 
+use App\Model\GoodsModel;
 use GuzzleHttp\Client;
 
 class WxController extends Controller
@@ -134,13 +135,24 @@ class WxController extends Controller
 //                ];
 //                $sql = DB::table('wx_web_power')->insertGetId($info2);
 //            }
-
         }
-
 
         //获取消息素材
         if ($msgtype=='text'){   //文本素材
 
+            $where = [];
+            $where[] = ['goods_name','like',"%$obj->Content%"];
+
+        $arr = GoodsModel::where($where)->where('goods_up',1)->get('goods_name')->toArray();
+////        $res = [];
+        foreach ($arr as $v){
+            $res = [
+                'goods_name' => $v['goods_name'],
+            ];
+//            print_r($res);die;
+        }
+
+//            print_r($arr);die;
             //回复天气信息
             if(strpos($obj->Content,'+天气')){
                 $city = explode('+',$obj->Content)[0];
@@ -166,11 +178,12 @@ class WxController extends Controller
                                     <Content><![CDATA['.$str.']]></Content>
                                 </xml>';
                 }
-            }else if ($obj->Content == '图文'){   //回复图文信息
-                $title = "最新商品";
+
+            }else if ($obj->Content){   //回复图文信息
+//                echo  1111;
+                $title = $res['goods_name'];
                 $openid = $openid;
                 $wxid = $wxid;
-//                $keyword = $content;
 //                $time = time();
                 echo $itemTpl = '<xml>
                     <ToUserName><![CDATA['.$openid.']]></ToUserName>

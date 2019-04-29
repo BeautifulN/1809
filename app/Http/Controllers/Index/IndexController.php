@@ -108,9 +108,9 @@ class IndexController extends Controller
 
         $arr = GoodsModel::where('goods_id',$goods_id)->get();  //商品详情
 
-        $code_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI'];
+        $code_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] .$_SERVER['REQUEST_URI'];  //二维码路径
 
-        print_r($code_url);
+//        print_r($code_url);
 
         return view('index.goodsdetail',['arr'=>$arr,'info'=>$info,'data'=>$data,'code_url'=>$code_url]);
     }
@@ -129,7 +129,6 @@ class IndexController extends Controller
 //        }
 //        return view('index.goodsdetail',['info'=>$info]);
 //    }
-
 
     /*
      * 添加购物车
