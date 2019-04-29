@@ -42,7 +42,7 @@ class OrderController extends Controller
             //写入订单详情表
             OrderDetailModel::insertGetId($detail);
         }
-        header('Refresh:3;url=/lists');
+        header('Refresh:3;url=/indexx');
         echo "生成订单成功";
     }
 
