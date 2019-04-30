@@ -60,32 +60,13 @@ class WxController extends Controller
 
 //        扫码关注事件
         if($event=='subscribe') {
-            //根据openid判断用户是否已存在
+//            根据openid判断用户是否已存在
             $user = DB::table('wx_address')->where(['openid' => $openid])->first();
 //            print_r($user);die;
 
-            //如果用户之前关注过
+//            如果用户之前关注过
             if ($user) {
-//                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>' . time() . '</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'来了，老弟儿~' . $user->nickname . ']]></Content></xml>';
-
-                $title = "欢迎回来";
-//                $openid = $openid;
-//                $wxid = $wxid;
-                echo'<xml>
-                    <ToUserName><![CDATA['.$openid.']]></ToUserName>
-                    <FromUserName><![CDATA['.$wxid.']]></FromUserName>
-                    <CreateTime>'.time().'</CreateTime>
-                    <MsgType><![CDATA[news]]></MsgType>
-                    <ArticleCount>1</ArticleCount>
-                    <Articles>
-                        <item>
-                            <Title><![CDATA['.$title.']]></Title> 
-                            <Description><![CDATA[猜猜是什么？！]]></Description>
-                            <PicUrl><![CDATA[http://1809lvmingjin.comcto.com/images/a1.jpg]]></PicUrl>
-                            <Url><![CDATA[http://1809lvmingjin.comcto.com/indexx]]></Url>
-                        </item>
-                    </Articles>
-                    </xml>';
+                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>' . time() . '</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'请输入商品名字' . $user->nickname . ']]></Content></xml>';
             }else{
 ///               获取用户的信息
                 $userinfo = $this->getuser($openid);
@@ -124,7 +105,7 @@ class WxController extends Controller
 //                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wxid.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.'千万人中，关注我；你真牛逼' . $info['nickname'] .']]></Content></xml>';
             }
 //            if($event=='SCAN'){
-//
+
 //                $info2 = [
 ////                'id' => $userinfo['subscribe'],
 //                    'openid' => $openid,
@@ -140,18 +121,24 @@ class WxController extends Controller
         //获取消息素材
         if ($msgtype=='text'){   //文本素材
 
+            //缓存用户搜索的信息
+            $key = $obj->Content;
+            Redis::set($key,$openid);
+            $record = Redis::expire($key,3600);
+//            print_r($record);
+//            echo '<pre>';print_r($key);echo '</pre>';die;
+
             $where = [];
             $where[] = ['goods_name','like',"%$obj->Content%"];
 
         $arr = GoodsModel::where($where)->where('goods_up',1)->get('goods_name')->toArray();
-////        $res = [];
+
         foreach ($arr as $v){
             $res = [
                 'goods_name' => $v['goods_name'],
             ];
 //            print_r($res);die;
         }
-
 //            print_r($arr);die;
             //回复天气信息
             if(strpos($obj->Content,'+天气')){
@@ -240,9 +227,6 @@ class WxController extends Controller
             ];
             $sql = DB::table('wx_voice')->insertGetId($arr);
         }
-
-
-
     }
 
     /*
@@ -270,7 +254,6 @@ class WxController extends Controller
             $tok = $arr['access_token'];
 //            print_r($tok);
         }
-
         return $tok;
     }
 
@@ -400,8 +383,8 @@ class WxController extends Controller
         $response = json_decode(file_get_contents($url),true);
 //        echo '<pre>';print_r($response);echo '</pre>';  //['access_token']   ['openid']   ['refresh_token']   ['expires_in']   ['scope']
 
-        $access_token = $response['access_token'];
-        $openid = $response['openid'];
+        $access_token = $response['access_token'];  //取出token
+        $openid = $response['openid'];  //取出openid
 
 //        echo '<pre>';print_r($access_token);echo '</pre>';die;
 
@@ -432,9 +415,7 @@ class WxController extends Controller
 
             ];
                 $arr = DB::table('wx_web_power')->insert($info);  //用户信息入库
-
         }
-
     }
 
     //网页授权签到
@@ -474,19 +455,15 @@ class WxController extends Controller
                 'province' => $response2['province'],
                 'country' => $response2['country'],
                 'headimgurl' => $response2['headimgurl'],
-
             ];
             $arr = DB::table('wx_web_power')->insert($info);  //用户信息入库
-
         }
         echo "<h1>" .$response2['nickname'].": 签到成功</h1>";
         $key = '1:wx_sign:' . $response2['openid'];
         Redis::lPush($key,date('Y-m-d H:i:s'));
         $record = Redis::lRange($key,0,-1);
         echo '<pre>';print_r($record);echo '</pre>';
-
     }
-
 
 
     //带参数的二维码
@@ -502,7 +479,6 @@ class WxController extends Controller
                     "scene_str" => "111",
                 ]
             ]
-
         ];
 
 //        echo '<pre>';print_r($arr);echo '</pre>';die;
